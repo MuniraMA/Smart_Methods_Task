@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Methods</title>
+<style>
+  p{color: #8AB5DD;
+  font-style: italic;
+    font-weight: bolder ;
+    font-size: larger;
+   
+  }
+  
+  body{background-image: url(https://i.pinimg.com/originals/10/96/b9/1096b9af1e75a5b7714793866d1e2cd7.jpg);
+    background-size: cover;
+  
+
+    text-align: center;
+  }
+.slidecontainer {
+    width:300px;
+  text-align: center;
+  width: 100%;
+
+}
+
+.slider {
+  text-align: center;
+  -webkit-appearance: none;
+  width: 60%;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 50px;
+}
+
+.slider:hover {
+  opacity: 5;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #d61e27;
+  cursor: pointer;
+  border-radius: 50px;
+    
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+    
+}
+  .button {
+   margin: 25px 8px ;
+      width:  140px ;
+      height: 15px ; 
+
+  padding-bottom: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #2a6099;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #3d4b8c}
+
+.button:active {
+  background-color: #3d4b8c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+ 
+    
+</style>
+</head>
+<body>
+<p>ARM CONTROLLER</p>
+  <br/>
+
+<form action="save.php" method="post">
+<div style="text-align: center; class="slidecontainer">
+  <p style="text-align: center; padding-right:20px;">1st motor</p>
+  <input type="range" name="Motor1" min="1" max="100" value="50" class="slider"  id="myRange1" onchange="updateTextInput1(this.value);">
+  <input type="text" id="textInput1" value="">
+</div>
+
+<div style="text-align: center; class="slidecontainer">
+  <p style="text-align: center; padding-right:20px;">2nd motor</p>
+  <input type="range" name="Motor2" min="1" max="100" value="50" class="slider" id="myRange2" onchange="updateTextInput2(this.value);">
+  <input type="text" id="textInput2" value="">
+</div>
+
+<div style="text-align: center; class="slidecontainer">
+  <p style="text-align: center; padding-right:20px;">3rd motor</p>
+  <input type="range" name="Motor3" min="1" max="100" value="50" class="slider" id="myRange3" onchange="updateTextInput3(this.value);">
+  <input type="text" id="textInput3" value="">
+</div>
+
+<div style="text-align: center; class="slidecontainer">
+  <p style="text-align: center; padding-right:20px;">4th motor</p>
+  <input type="range" name="Motor4" min="1" max="100" value="50" class="slider" id="myRange4" onchange="updateTextInput4(this.value);">
+  <input type="text" id="textInput4" value="">
+</div>
+
+<div style="text-align: center; class="slidecontainer">
+  <p style="text-align: center; padding-right:20px;">5th motor</p>
+  <input type="range" name="Motor5" min="1" max="100" value="50" class="slider" id="myRange5" onchange="updateTextInput5(this.value);">
+  <input type="text" id="textInput5" value="">
+</div>
+
+<div style="text-align: center; class="slidecontainer">
+  <p style="text-align: center; padding-right:20px;">6th motor</p>
+  <input  type="range" name="Motor6" min="1" max="100" value="50" class="slider" id="myRange6" onchange="updateTextInput6(this.value);">
+  <input type="text" id="textInput6" value="">
+</div>
+<br/>
+<button class="button" type="submit" >SAVE</button>
+</form>
+
+<form action="view.php" method="get">
+<button class="button" type="submit">SEND</button>
+</form>
+
+</body>
+</html>
+
+
+<script>
+function updateTextInput1(val) {
+          document.getElementById('textInput1').value=val; 
+        }
+
+function updateTextInput2(val) {
+          document.getElementById('textInput2').value=val; 
+}
+
+function updateTextInput3(val) {
+          document.getElementById('textInput3').value=val; 
+}
+
+function updateTextInput4(val) {
+          document.getElementById('textInput4').value=val; 
+}
+
+function updateTextInput5(val) {
+          document.getElementById('textInput5').value=val; 
+}
+
+function updateTextInput6(val) {
+          document.getElementById('textInput6').value=val; 
+}
+
+</script>
